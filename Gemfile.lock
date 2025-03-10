@@ -84,8 +84,6 @@ GEM
     bindex (0.8.1)
     bootsnap (1.18.4)
       msgpack (~> 1.2)
-    brakeman (7.0.0)
-      racc
     builder (3.3.0)
     capybara (3.40.0)
       addressable
@@ -247,6 +245,10 @@ GEM
     rake (13.2.1)
     rdoc (6.12.0)
       psych (>= 4.0.0)
+    redis (5.4.0)
+      redis-client (>= 0.22.0)
+    redis-client (0.24.0)
+      connection_pool
     regexp_parser (2.10.0)
     reline (0.6.0)
       io-console (~> 0.5)
@@ -358,16 +360,16 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
-  brakeman
   capybara
   cssbundling-rails
   debug
   jsbundling-rails
   kamal
-  pg (~> 1.1)
+  pg
   propshaft
-  puma (>= 5.0)
-  rails (~> 8.0.1)
+  puma
+  rails
+  redis
   rubocop-rails-omakase
   selenium-webdriver
   solid_cable
@@ -378,6 +380,9 @@ DEPENDENCIES
   turbo-rails
   tzinfo-data
   web-console
+
+RUBY VERSION
+   ruby 3.2.2p53
 
 BUNDLED WITH
    2.6.5
